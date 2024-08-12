@@ -73,7 +73,7 @@ def draw(img,info,prev_pos,canvas,color=(255,0,255)):
 
 def genAnswer(info,canvas):
     fingers , lmlist = info
-    #To send to AI Show NO Fingers
+    #To send to AI Show Thumb and Pinky Finger
     if fingers == [1,0,0,0,1]:
         questionImg = Image.fromarray(canvas)
         response = model.generate_content(["Solve this Problem:",questionImg])
